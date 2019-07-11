@@ -1,0 +1,43 @@
+<https://0001> <https://rdf:type> <https://Person> .
+
+<https://0001> <https://Birthdate> <https://1995/01/01> .
+<https://0001> <https://Name> <https://Bob> . 
+
+<https://0002> <https://rdf:type> <https://Person> .
+
+<https://0002> <https://Birthdate> <https://1992/01/01> .
+<https://0002> <https://Name> <https://Tom> .
+
+<https://0003> <https://rdf:type> <https://Person> .
+
+<https://0003> <https://Birthdate> <https://1988/01/01> .
+<https://0003> <https://Name> <https://Jim> .
+
+<https://0011> <https://rdf:type> <https://Book> .
+<https://0011> <https://Name> <https://Bigworld> .
+<https://0011> <https://hasAuther> <https://0001>. 
+<https://0011> <https://hasAuther> <https://0002> .
+
+<https://0012> <https://rdf:type> <https://Magazine> .
+<https://0012> <https://Name> <https://ELLE> .
+<https://0012> <https://hasEdit> <https://0002>. 
+
+<https://0001> <https://Co-auther> <https://0001> .
+<https://0002> <https://Co-auther> <https://0001> .
+<https://0002> <https://Co-auther> <https://0002> .
+<https://0001> <https://Co-auther> <https://0002> .
+<https://0002> <https://Co-auther> <https://0003> .
+<https://0003> <https://Co-auther> <https://0002> .
+<https://0001> <https://Co-auther> <https://0003> .
+<https://0003> <https://Co-auther> <https://0001> .
+<https://0003> <https://Co-auther> <https://0003> .
+
+<https://0004> <https://hasLeader> <https://0005> .
+<https://0005> <https://hasLeader> <https://0006> .
+<https://0004> <https://hasLeader> <https://0006> .
+
+<https://0007> <https://hasBoss> <https://0008> .
+<https://0008> <https://hasEmployee> <https://0007> .
+
+
+
