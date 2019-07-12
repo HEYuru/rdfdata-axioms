@@ -57,9 +57,9 @@ for i in dic1:
 		if i == j:
 			continue
 		if dic1[i]&dic1[j]:
-			print(i,' and ',j,' isn\'t disjunction')
+			print(i,' and ',j,' aren\'t disjunction')
 		else:
-			print(i,' and ',j,' is  disjunction')		
+			print(i,' and ',j,' are  disjunction')		
 
 
 
