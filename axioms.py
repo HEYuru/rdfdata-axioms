@@ -197,7 +197,7 @@ def axioms(filename):
 	print('over')	
 			
 		
-datasets = ["test.ttl"]			
+datasets = ["2014-09_persondata_de.ttl","2015-04_persondata_de.ttl"]			
 	
 for i in datasets:
 	axioms(i)
