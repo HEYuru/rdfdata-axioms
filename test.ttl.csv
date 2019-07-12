@@ -1,0 +1,9 @@
+https://hasEmployee,functionality,1.0,inverse
+https://Birthdate,functionality,1.0
+https://hasBoss,functionality,1.0,inverse
+https://hasEdit,functionality,1.0
+https://Co-auther,functionality,0.3333333333333333,reflexivity,symmetry,transivity
+https://rdf:type,functionality,0.625
+https://hasAuther,functionality,0.5
+https://Name,functionality,1.0
+https://hasLeader,functionality,0.6666666666666666,transivity

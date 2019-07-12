@@ -27,19 +27,26 @@ for triple in graph:
 	propertise.add(triple[1])
 	
 print(propertise)
-p = list(propertise)
-s = set()
-o = []
 
-for pi in p :
-	for triple in graph:
-		if triple[1]==pi:
-			s.add(triple[0])
-			o.append(triple[2])
-	print(pi)
-	print(len(s)/len(o))
-	s = set()
-	o = []	
+
+dic_fun = {}
+subject = {}
+valuer = {}
+	
+for pi in propertise:
+	subject[pi] = set()
+	valuer[pi] = []
+	
+for triple in graph :
+	p = triple[1]
+	subject[p].add(triple[0])
+	valuer[p].append(triple[2])
+	
+for pi in propertise:
+	dic_fun[pi] = len(subject[pi])/ len(valuer[pi])	
+	
+for pi in dic_fun:
+	print(pi,': ',dic_fun[pi])	
 	
 
 		

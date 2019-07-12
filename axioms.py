@@ -17,12 +17,30 @@ class Stream(Sink):
 
 # functionality 
 # s is sebject.o is  object 
-# time complexity = N * p
+# time complexity = N * p 
+# new time complexity = p + N + p
 def functionality(graph,propertise):
-	s = set()  
-	o = []
+	
 	dic_fun = {}
 	
+	subject = {}
+	valuer = {}
+	
+	for pi in propertise:
+		subject[pi] = set()
+		valuer[pi] = []
+	
+	for triple in graph :
+		p = triple[1]
+		subject[p].add(triple[0])
+		valuer[p].append(triple[2])
+	
+	for pi in propertise:
+		dic_fun[pi] = len(subject[pi])/ len(valuer[pi])	
+		
+	'''
+	s = set()  
+	o = []
 	for pi in propertise :
 		for triple in graph:
 			if triple[1]==pi:
@@ -31,6 +49,7 @@ def functionality(graph,propertise):
 		dic_fun[pi] = len(s)/len(o)
 		s = set()
 		o = []
+	'''
 	return dic_fun
 	
 
@@ -196,12 +215,13 @@ def axioms(filename):
 	
 	print('over')	
 			
-		
+	
 datasets = ["2014-09_persondata_de.ttl","2015-04_persondata_de.ttl"]			
 	
 for i in datasets:
 	axioms(i)
 
-
-	
+'''
+axioms("test.ttl")
+'''	
 
