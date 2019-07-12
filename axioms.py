@@ -36,19 +36,19 @@ def functionality(graph,propertise):
 
 # relexivity
 # time complexity = N 
-def relexivity(graph,propertise):
-	dic_rel = {}
+def reflexivity(graph,propertise):
+	dic_ref = {}
 	for pi in propertise:
-		dic_rel[pi] = 0
+		dic_ref[pi] = 0
 
 # if dic_rel[p] = 1 ,p is reflexivity			
 	
 	for triple in graph:
 		if triple[0] == triple[2]:
-			dic_rel[triple[1]] = 1
+			dic_ref[triple[1]] = 1
 			print(triple)
 	
-	return dic_rel
+	return dic_ref
 	
 # symmetry
 # time complexity = N*?
@@ -161,7 +161,7 @@ def axioms(filename):
 	dic_fun = functionality(graph,propertise)
 	print('1')
 	
-	dic_rel = relexivity(graph,propertise)
+	dic_ref = reflexivity(graph,propertise)
 	print('2')
 	dic_sym = symmetry(graph,propertise)
 	print('3')
@@ -181,8 +181,8 @@ def axioms(filename):
 			l1.append('functionality')
 			l1.append(dic_fun[pi])	
 		
-		if(dic_rel[pi] == 1):
-			l1.append('relexivity')
+		if(dic_ref[pi] == 1):
+			l1.append('reflexivity')
 		if(dic_sym[pi] == 1):
 			l1.append('symmetry')		
 		if(len(dic_inv[pi]) != 0 ):
@@ -197,7 +197,7 @@ def axioms(filename):
 	print('over')	
 			
 		
-datasets = ["2015-04_persondata_de.ttl","2015-04_persondata_de"]			
+datasets = ["test.ttl"]			
 	
 for i in datasets:
 	axioms(i)
